@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.header {
+    background: url("img/pattern-bg.svg") center center/cover no-repeat;
+    padding: 3rem;
+    width: 100%;
+    max-width: 87%;
+    margin: auto;
+}
+
+.header img {
+    width: 100%;
+}
+
+.btn {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 5rem;
+    box-shadow: 0 0 15px;
+    margin: auto;
+    width: 30%;
+    padding: .8rem;
+}
+
+.text {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.text img {
+    width: 15%;
+    top: -1.5rem;
+    position: absolute;
+    z-index: -1;
+}
+
+.text ul {
+    width: 80%;
+    margin: auto;
+}
+
+.text ul li:nth-child(1) {
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.text ul li:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.name {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.job {
+    color: var(--grayish-blue);
+}
+
+@media all and (min-width: 1300px) {
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .text {
+        text-align: left;
+    }
+
+    .text ul {
+        width: unset;
+    }
+
+    .text ul li:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        /*justify-content: flex-end;*/
+        gap: 1rem;
+    }
+
+    .btn {
+        text-align: left;
+        margin: 3rem 0;
+    }
+
+
+}
